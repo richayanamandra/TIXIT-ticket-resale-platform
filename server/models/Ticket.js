@@ -2,19 +2,15 @@ import mongoose from "mongoose";
 
 const ticketSchema = new mongoose.Schema({
   title: { type: String, required: true },
-  description: { type: String },
-  category: { 
-    type: String, 
-    enum: ["Movie", "Concert", "Standup Comedy", "Restaurant", "Sports", "Art", "Festive/Religious", "Other"], 
-    required: true 
-  },
+  description: { type: String, default: "" },
+  category: { type: String, required: true },
   city: { type: String, required: true },
-  date: { type: Date, required: true },
-  time: { type: String, required: true }, // could use string like "19:30"
+  date: { type: String, required: true }, // "YYYY-MM-DD"
+  time: { type: String, required: true }, // "HH:mm"
   place: { type: String, required: true },
-  details: { type: String }, // VIP, seating info, etc.
-  price: { type: Number, required: true },
-  seller: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: false },
+  details: { type: String, default: "" },
+  price: { type: Number, required: true, min: 0 },
+  seller: { type: mongoose.Schema.Types.ObjectId, ref: "User" }, // optional
   isSold: { type: Boolean, default: false }
 }, { timestamps: true });
 

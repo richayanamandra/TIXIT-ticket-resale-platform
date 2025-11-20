@@ -1,0 +1,4 @@
+tixit/client/src/pages: Dashboard.js, LandingPage.js, Login.js, Signup.js, SellTicket.js, TicketsList.js
+tixit/client/src: App.js, index.js
+tixit/server/models: Ticket.js, User.js
+tixit/server/routes: auth.js, ticket.js
