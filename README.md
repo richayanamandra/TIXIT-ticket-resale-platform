@@ -182,8 +182,6 @@ Security hardening + exploit simulations: Nov 2025
 
 Final submission for course: Nov 2025
 
-Deployment Grade Completion: Feb 2025
-
 📌 Status
 
 ✅ Fully functional
